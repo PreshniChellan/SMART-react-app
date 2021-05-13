@@ -10,7 +10,7 @@ export default function HeaderLogin() {
 
     return (
         <Navbar.Text style={loginStyle}>
-            Signed in as: <a href="#login">Mark Otto</a>
+            Signed in as: <a href="#login">Warehouse 13</a>
         </Navbar.Text>
     )
 }

@@ -1,10 +1,11 @@
 import Navbar from 'react-bootstrap/Navbar'
-import { Link } from 'react-router-dom'
-import SmartBG from '../Images/Word-NoBG.png'
+import SmartBG from './Word-NoBG.png'
 import { TiMessage } from 'react-icons/ti'
 import { BsBell } from 'react-icons/bs'
 import HeaderLogin from './HeaderLogin'
 import { IconContext } from 'react-icons/lib'
+
+
 
 
 export default function Header() {
@@ -55,9 +56,9 @@ export default function Header() {
                 </Navbar.Brand>
                     <HeaderLogin />
                 <IconContext.Provider value={{size:"1.8em"}}>
-                <Link to="/"><TiMessage style={messStyle} /></Link>
-                    
-                    <BsBell style={bellStyle} />
+
+                    <TiMessage style={messStyle} />     <BsBell style={bellStyle} />
+
                 </IconContext.Provider>                    
             </Navbar>
         </>

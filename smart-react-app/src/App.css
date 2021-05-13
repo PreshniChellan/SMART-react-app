@@ -1,2 +1,10 @@
-
 /*# sourceMappingURL=App.css.map *//*# sourceMappingURL=App.css.map */
+
+h2 {
+    margin-left: 255px;
+}
+
+.topbtns {
+    float: right;
+    margin-right: 25px;
+}

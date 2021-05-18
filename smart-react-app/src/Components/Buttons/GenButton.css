@@ -1,2 +1,6 @@
-
 /*# sourceMappingURL=GenButton.css.map *//*# sourceMappingURL=GenButton.css.map */
+
+.btn {
+    width:50px;
+    height: 26px;
+}

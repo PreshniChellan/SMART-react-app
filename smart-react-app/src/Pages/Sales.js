@@ -1,4 +1,5 @@
 import { Redirect } from 'react-router-dom'
+import Sidebar from '../Components/SideNav/Sidebar'
 
 export default function Sales({ authorized }) {
 
@@ -8,7 +9,7 @@ export default function Sales({ authorized }) {
 
     return (
         <div>
-            <p>test</p>
+            <Sidebar />
         </div>
     )
 }

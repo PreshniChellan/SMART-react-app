@@ -1,26 +1,18 @@
 import './App.css';
-import Header from './Components/Header/Header'
-import GenButton from './Components/Buttons/GenButton'
-import Grid1 from './Components/SalesGrid/Grid1';
-import SideNav from './Components/SideNav/SideNav';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Login from './Pages/Login/SignIn'
+import Sales from './Pages/Sales';
+
 
 
 function App() {
   return (
-    <div className="App">
-        <Header />
-        <SideNav/>
-        <br />
-        <br />
-        <h2>Make a sale and view your current history.</h2>
-      <br />
-        <div className="topbtns">
-            <GenButton text="Export"></GenButton>{" "}
-            <GenButton text="New Sale"></GenButton>
-        </div>
-      <br /><br />
-        <Grid1 />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/sales" component={() => <Sales authorized={true} />} />
+      </Switch>
+    </Router>
   );
 }
 

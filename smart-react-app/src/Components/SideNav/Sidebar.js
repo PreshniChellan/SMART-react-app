@@ -6,12 +6,14 @@ import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
-import SmartLogo from '../SideNav/Word-NoBG.png'
+import SmartLogo from '../SideNav/Word-NoBG.png';
+import Button from '@material-ui/core/Button';
+
 
 const Nav = styled.div`
   background-image: linear-gradient(to right, #7E8FDE, #5BA4D2, #35BBC2) !important;
   height: 80px;
-  display: flex;
+  display: flexbox;
   justify-content: flex-start;
   align-items: center;
 `;
@@ -43,10 +45,24 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
+const NavIcon2 = styled(Link)`
+  margin-left: auto;
+  margin-right:20px;
+  font-size: 2rem;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+`;
+
 const SmartLogoStyle = {
   width: 150,
   marginLeft: 25,
+  display: 'inline'
 }
+
+
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -56,12 +72,17 @@ const Sidebar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
+
         <Nav>
           <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
           <img src={SmartLogo} style={SmartLogoStyle} />
+          <NavIcon2 to='/'>
+          <Button variant="outlined">Logout</Button>
+          </NavIcon2>          
         </Nav>
+
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
             <NavIcon to='#'>

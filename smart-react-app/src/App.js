@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Login from './Pages/Login/SignIn'
-import Sales from './Pages/Sales';
+import Sales from './Pages/Sales/Sales';
 
 
 

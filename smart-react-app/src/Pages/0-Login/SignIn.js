@@ -11,8 +11,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom'
-import LoginLogo from '../Login/LoginLogo.png'
-import BackgroundImg1 from '../Login/BackgroundImg1.jpg'
+import { borders } from '@material-ui/system';
+import LoginLogo from './LoginLogo.png'
+import BackgroundImg1 from './BackgroundImg1.jpg'
 
 
 
@@ -44,11 +45,20 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    
   },
 
   form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    width: '75%', // Fix IE 11 issue.
+    marginTop: theme.spacing(5),
+    borderStyle: 'solid',
+    padding: 20,
+    borderRadius: 25,
+    borderColor: '#5F5E5C',
+    borderBottomWidth: 'thin',
+    borderTopWidth: 'thin',
+    borderLeftWidth: 'thin',
+    borderRightWidth: 'thin',
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
@@ -56,7 +66,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const loginLogoStyle = {
-    width:120,
+    width:200,
+    marginTop: 50,
 }
 
 export default function SignInSide() {
@@ -72,9 +83,6 @@ export default function SignInSide() {
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <img src={LoginLogo} style={loginLogoStyle}/>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
           <form className={classes.form} noValidate>
             <TextField
               variant="outlined"
@@ -106,13 +114,13 @@ export default function SignInSide() {
             type="submit"
             fullWidth
             variant="contained"
-            style={{backgroundColor:"#2DAAD6"}}
+            style={{backgroundColor:"#2DAAD6", color:'white'}}
             className={classes.submit}
             onClick={() => {
                 history.push('/Sales');
             }}
           >
-            Sign In
+            Login
           </Button>
             <Grid container>
               <Grid item xs>

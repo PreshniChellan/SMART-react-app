@@ -1,6 +1,19 @@
 /*# sourceMappingURL=GenButton.css.map *//*# sourceMappingURL=GenButton.css.map */
 
 .btn {
-    width:50px;
-    height: 26px;
+    width: 150px;
+    border-radius: 15px;
+    height: 35px;
+    border: none;
+    color: white;
+    background-color: #2DAAD6;
+    outline: none;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+  button:hover {
+    background-color: #7D91D7;
 }

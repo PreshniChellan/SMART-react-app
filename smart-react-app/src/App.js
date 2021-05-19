@@ -44,7 +44,7 @@ function App() {
         <Route exact path="/Sales" component={() => <Sales authorized={true} />} />
         
         {/* Routing for Sell on SideNav */}
-        <Route exact path="/Cash" />
+        <Route exact path="/Cash" component={Cash}/>
         <Route exact path="/Customers" />
         <Route exact path="/History" />
         <Route exact path="/MakeSale" />

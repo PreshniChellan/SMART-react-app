@@ -44,4 +44,52 @@ function App() {
         <Route exact path="/" component={Login} />
         <Route exact path="/Home" component={() => <Home authorized={true} />} />
         
+        {/* Routing for Sell on SideNav */}
+        <Route exact path="/Cash" component={Cash} />
+        <Route exact path="/Customers" component={Customers} />
+        <Route exact path="/History" component={History} />
+        <Route exact path="/MakeSale" component={MakeSale} />
+        <Route exact path="/Register" component={Register} />
+        <Route exact path="/SellSettings" component={SellSettings} />
+
+        {/* Routing for Dashboards on SideNav */}
+        <Route exact path="/Sales" component={Sales} />
+        <Route exact path="/Inventory" component={Inventory} />
+        <Route exact path="/Leads" component={Leads} />
+        <Route exact path="/Replacements" component={Replacements} />
+        <Route exact path="/Targets" component={Targets} />
+
+        {/* Routing for Inventory on SideNav */}
+        <Route exact path="/Catalog" component={Catalog} />
+        <Route exact path="/InvSettings" component={InvSettings} />
+        <Route exact path="/Product" component={Product} />
+        <Route exact path="/Promotions" component={Promotions} />
+        <Route exact path="/Stock" component={Stock} />
+
+        {/* Routing for Payments on SideNav */}
+        <Route exact path="/Finances" component={Finances} />
+        <Route exact path="/Payroll" component={Payroll} />
+
+        {/* Routing for Leads on SideNav */}
+        <Route exact path="/Referrals" component={Referrals} />
+        <Route exact path="/Management" component={Management} />
+        <Route exact path="/LeadSettings" component={LeadSettings} />
+
+        {/* Routing for Teams on SideNav */}
+        {/* Routing to Target page done already in Dashboards */}
+        <Route exact path="/Stores" component={Stores} />
+        <Route exact path="/Teams" component={Teams} />
+
+        {/* Routing for Reporting on SideNav */}
+        <Route exact path="/Opportunities" component={Opportunities} />
+
+        {/* Routing for Settings on SideNav */}
+        <Route exact path="/MainSettings" component={MainSettings} />
+
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
         

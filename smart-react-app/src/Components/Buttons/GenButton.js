@@ -1,9 +1,10 @@
 import React from 'react'
 import './GenButton.css';
 
+const GenButton = ({value, onClick = () => {}}) => {
+return <button className='btn' onClick={onClick}>
+{value}
+</button>
 
-const GenButton = ({text, path}) => {
-    return <button className='btn'>{text, path}</button>
 }
-
 export default GenButton

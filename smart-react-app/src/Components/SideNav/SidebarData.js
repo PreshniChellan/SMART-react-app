@@ -1,13 +1,14 @@
 import React from 'react';
 import { AiFillHome, AiOutlineFolderOpen, AiOutlineUsergroupAdd } from 'react-icons/ai'
-import { FaRegHandshake, FaBoxes, FaRegCreditCard, FaRegClipboard, FaTools, FaCashRegister, FaSitemap, FaBook } from 'react-icons/fa'
+import { FaRegHandshake, FaBoxes, FaRegCreditCard, FaRegClipboard, FaTools, FaCashRegister, FaSitemap, FaBook, FaStoreAlt, FaMoneyBill } from 'react-icons/fa'
 import { BsGraphUp, BsPeopleFill } from 'react-icons/bs'
-import { RiTeamFill, RiArrowUpSFill, RiArrowDownSFill, RiStockFill, RiExchangeFill } from 'react-icons/ri'
-import { GrCatalog } from 'react-icons/gr'
+import { RiTeamFill,  RiStockFill, RiExchangeFill } from 'react-icons/ri'
+import { GiReceiveMoney, GiMeepleGroup } from 'react-icons/gi'
 import { BiHistory } from 'react-icons/bi'
 import { MdSettings, MdFolderSpecial } from 'react-icons/md'
 import { VscReferences } from 'react-icons/vsc'
 import { SiManageiq } from 'react-icons/si'
+import { ImTarget } from 'react-icons/im'
 
 const iconStyle = {
     color: '#2DAAD6'
@@ -24,37 +25,35 @@ export const SidebarData = [
         title: 'Sell',
         icon: <FaRegHandshake style={iconStyle} />,
         cName: 'nav-text',
-        iconClosed:<RiArrowUpSFill style={iconStyle} />,
-        iconOpened:<RiArrowDownSFill style={iconStyle} />,
         subNav: [
             {
                 title: 'Make a Sale',
-                path: '/Sell/MakeSale',
+                path: '/MakeSale',
                 icon: <RiExchangeFill style={iconStyle} />,
             },
             {
                 title: 'Register',
-                path: '/Sell/Register',
+                path: 'Register',
                 icon: <AiOutlineUsergroupAdd style={iconStyle} />,
             },
             {
                 title: 'History',
-                path: '/Sell/History',
+                path: '/History',
                 icon: <BiHistory style={iconStyle} />,
             },
             {
                 title: 'Cash',
-                path: '/Sell/Cash',
+                path: '/Cash',
                 icon: <FaCashRegister style={iconStyle} />,
             },
             {
                 title: 'Customers',
-                path: '/Sell/Customers',
+                path: '/Customers',
                 icon: <BsPeopleFill style={iconStyle} />,
             },
             {
                 title: 'SellSettings',
-                path: '/Sell/SellSettings',
+                path: '/SellSettings',
                 icon: <MdSettings style={iconStyle} />,
             },
         ]    
@@ -69,75 +68,101 @@ export const SidebarData = [
         title: 'Inventory',
         icon: <FaBoxes style={iconStyle} />,
         cName: 'nav-text',
-        iconClosed:<RiArrowUpSFill style={iconStyle} />,
-        iconOpened:<RiArrowDownSFill style={iconStyle} />,
         subNav:[
             {
                 title: 'Stock',
-                path: '/Inventory/Stock',
+                path: '/Stock',
                 icon: <FaSitemap style={iconStyle} />,
             },
             {
                 title: 'Products',
-                path: '/Inventory/Products',
+                path: '/Products',
                 icon: <RiStockFill style={iconStyle} />,
             },
             {
                 title: 'Catalog',
-                path: '/Inventory/Catalog',
+                path: '/Catalog',
                 icon: <FaBook style={iconStyle} />,
             },
             {
                 title: 'Promotions',
-                path: '/Inventory/Promotions',
+                path: '/Promotions',
                 icon: <MdFolderSpecial style={iconStyle} />,
             },
             {
                 title: 'InvSettings',
-                path: '/Inventory/InvSettings',
+                path: '/InvSettings',
                 icon: <MdSettings style={iconStyle} />,
             },
         ]
     },
     {
         title: 'Payments',
-        path: '/Payments',
+
         icon: <FaRegCreditCard style={iconStyle} />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        subNav:[
+            {
+                title: 'Finances',
+                path: '/Finances',
+                con: <FaMoneyBill style={iconStyle} />,
+            },
+            {
+                title: 'Payroll',
+                path: '/Payroll',
+                con: <GiReceiveMoney style={iconStyle} />,
+            },
+		]
     },
     {
         title: 'Leads',
         icon: <AiOutlineFolderOpen style={iconStyle} />,
         cName: 'nav-text',
-        iconClosed:<RiArrowUpSFill style={iconStyle} />,
-        iconOpened:<RiArrowDownSFill style={iconStyle} />,
+
         subNav:[
             {
                 title: 'Referrals',
-                path: '/Leads/Referrals',
+                path: '/Referrals',
                 icon: <VscReferences style={iconStyle} />,
             },
             {
                 title: 'Management',
-                path: '/Leads/Management',
+                path: '/Management',
                 icon: <SiManageiq style={iconStyle} />,
             },
             {
                 title: 'LeadSettings',
-                path: '/Leads/LeadSettings',
+                path: '/LeadSettings',
                 icon: <MdSettings style={iconStyle} />,
             },
         ]
     },
     {
-        title: 'Teams',
-        path: '/Teams',
+        title: 'Users',
         icon: <RiTeamFill style={iconStyle} />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+
+        subNav:[
+            {
+                title: 'Teams',
+                path: '/Teams',
+                icon: <GiMeepleGroup style={iconStyle} />,
+            },
+            {
+                title: 'Stores',
+                path: '/Stores',
+                icon: <FaStoreAlt style={iconStyle} />,
+            },
+            {
+                title: 'Targets',
+                path: '/Targets',
+                icon: <ImTarget style={iconStyle} />,
+            },
+		]
     },
     {
         title: 'Reporting',
-        path: '/Reporting',
+        path: '/',
         icon: <FaRegClipboard style={iconStyle} />,
         cName: 'nav-text'
     },

@@ -1,19 +1,16 @@
-import { Redirect, useHistory } from 'react-router-dom'
+
 import './Sales.css'
+import { useHistory } from 'react-router-dom'
 import Sidebar from '../../../Components/SideNav/Sidebar'
 import GenButton from '../../../Components/Buttons/GenButton'
 
 
-export default function Sales({ authorized }) {
+export default function Sales() {
 
     let history = useHistory(); 
     
     const handleRoute = () =>{
         history.push("/")
-    }
-
-    if (!authorized) {
-        return <Redirect to='/' />
     }
 
     return (

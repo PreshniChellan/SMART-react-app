@@ -1,7 +1,8 @@
-import React from 'react'
 import Sidebar from '../../../Components/SideNav/Sidebar'
 
-const Cash = () => {
+
+export default function Cash() {
+
     return (
         <div>
             <Sidebar />
@@ -9,6 +10,3 @@ const Cash = () => {
         </div>
     )
 }
-
-export default Cash
-

@@ -17,7 +17,7 @@ const iconStyle = {
 export const SidebarData = [
     {
         title: 'Home',
-        path: '/Sales',
+        path: '/Home',
         icon: <AiFillHome style={iconStyle} />,
         cName: 'nav-text'
     },
@@ -60,9 +60,36 @@ export const SidebarData = [
     },
     {
         title: 'Dashboards',
-        path: '/Dashboards',
+   
         icon: <BsGraphUp style={iconStyle} />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        subNav:[
+            {
+                title: 'Sales',
+                path: '/Sales',
+                icon: <FaRegHandshake style={iconStyle} />,
+            },
+            {
+                title: 'Targets',
+                path: '/Targets',
+                icon: <ImTarget style={iconStyle} />,
+            },
+            {
+                title: 'Leads',
+                path: '/Leads',
+                icon: <AiOutlineFolderOpen style={iconStyle} />,
+            },
+            {
+                title: 'Inventory',
+                path: '/Inventory',
+                icon: <FaBoxes style={iconStyle} />,
+            },
+            {
+                title: 'Replacements',
+                path: '/Replacements',
+                icon: <MdSettings style={iconStyle} />,
+            },
+        ]
     },
     {
         title: 'Inventory',
@@ -75,8 +102,8 @@ export const SidebarData = [
                 icon: <FaSitemap style={iconStyle} />,
             },
             {
-                title: 'Products',
-                path: '/Products',
+                title: 'Product',
+                path: '/Product',
                 icon: <RiStockFill style={iconStyle} />,
             },
             {
@@ -162,13 +189,13 @@ export const SidebarData = [
     },
     {
         title: 'Reporting',
-        path: '/',
+        path: '/Opportunities',
         icon: <FaRegClipboard style={iconStyle} />,
         cName: 'nav-text'
     },
     {
         title: 'Settings',
-        path: '/Settings',
+        path: '/MainSettings',
         icon: <FaTools style={iconStyle} />,
         cName: 'nav-text'
     },

@@ -116,7 +116,7 @@ export default function SignInSide() {
             style={{backgroundColor:"#2DAAD6", color:'white'}}
             className={classes.submit}
             onClick={() => {
-                history.push('/Sales');
+                history.push('/Home');
             }}
           >
             Login

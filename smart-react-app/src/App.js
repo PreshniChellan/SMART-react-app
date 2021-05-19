@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Login from './Pages/0-Login/SignIn'
-import Sales from './Pages/2-Dashboards/Sales/Sales';
+import Home from './Pages/Home/Home'
 
 import Cash from './Pages/1-Sell/Cash/Cash'
 import Customers from './Pages/1-Sell/Customers/Customers'
@@ -14,6 +14,7 @@ import Inventory from './Pages/2-Dashboards/Inventory/Inventory';
 import Leads from './Pages/2-Dashboards/Leads/Leads';
 import Replacements from './Pages/2-Dashboards/Replacements/Replacements';
 import Targets from './Pages/2-Dashboards/Targets/Targets';
+import Sales from './Pages/2-Dashboards/Sales/Sales';
 
 import Catalog from './Pages/3-Inventory/Catalog/Catalog'
 import InvSettings from './Pages/3-Inventory/InvSettings/InvSettings'
@@ -41,48 +42,49 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Login} />
-        <Route exact path="/Sales" component={() => <Sales authorized={true} />} />
+        <Route exact path="/Home" component={() => <Home authorized={true} />} />
         
         {/* Routing for Sell on SideNav */}
-        <Route exact path="/Cash" />
-        <Route exact path="/Customers" />
-        <Route exact path="/History" />
-        <Route exact path="/MakeSale" />
-        <Route exact path="/Register" />
-        <Route exact path="/SellSettings" />
+        <Route exact path="/Cash" component={Cash} />
+        <Route exact path="/Customers" component={Customers} />
+        <Route exact path="/History" component={History} />
+        <Route exact path="/MakeSale" component={MakeSale} />
+        <Route exact path="/Register" component={Register} />
+        <Route exact path="/SellSettings" component={SellSettings} />
 
         {/* Routing for Dashboards on SideNav */}
-        <Route exact path="/Inventory" />
-        <Route exact path="/Leads" />
-        <Route exact path="/Replacements" />
-        <Route exact path="/Targets" />
+        <Route exact path="/Sales" component={Sales} />
+        <Route exact path="/Inventory" component={Inventory} />
+        <Route exact path="/Leads" component={Leads} />
+        <Route exact path="/Replacements" component={Replacements} />
+        <Route exact path="/Targets" component={Targets} />
 
         {/* Routing for Inventory on SideNav */}
-        <Route exact path="/Catalog" />
-        <Route exact path="/InvSettings" />
-        <Route exact path="/Product" />
-        <Route exact path="/Promotions" />
-        <Route exact path="/Stock" />
+        <Route exact path="/Catalog" component={Catalog} />
+        <Route exact path="/InvSettings" component={InvSettings} />
+        <Route exact path="/Product" component={Product} />
+        <Route exact path="/Promotions" component={Promotions} />
+        <Route exact path="/Stock" component={Stock} />
 
         {/* Routing for Payments on SideNav */}
-        <Route exact path="/Finances" />
-        <Route exact path="/Payroll" />
+        <Route exact path="/Finances" component={Finances} />
+        <Route exact path="/Payroll" component={Payroll} />
 
         {/* Routing for Leads on SideNav */}
-        <Route exact path="/Referrals" />
-        <Route exact path="/Management" />
-        <Route exact path="/LeadSettings" />
+        <Route exact path="/Referrals" component={Referrals} />
+        <Route exact path="/Management" component={Management} />
+        <Route exact path="/LeadSettings" component={LeadSettings} />
 
         {/* Routing for Teams on SideNav */}
         {/* Routing to Target page done already in Dashboards */}
-        <Route exact path="/Stores" />
-        <Route exact path="/Teams" />
+        <Route exact path="/Stores" component={Stores} />
+        <Route exact path="/Teams" component={Teams} />
 
         {/* Routing for Reporting on SideNav */}
-        <Route exact path="/Opportunities" />
+        <Route exact path="/Opportunities" component={Opportunities} />
 
         {/* Routing for Settings on SideNav */}
-        <Route exact path="/MainSettings" />
+        <Route exact path="/MainSettings" component={MainSettings} />
 
       </Switch>
     </Router>

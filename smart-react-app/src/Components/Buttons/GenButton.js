@@ -3,7 +3,7 @@ import './GenButton.css';
 
 const GenButton = ({value, onClick = () => {}}) => {
 return <button className='btn' onClick={onClick}>
-{value}
+{value} 
 </button>
 
 }

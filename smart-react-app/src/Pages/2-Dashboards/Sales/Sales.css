@@ -1,4 +1,14 @@
-.content {
-    transition: 300ms;
+.titleLine {
+    margin-top:25px;
+}
+
+.headerTitle {
     margin-left: 25px;
+    display: inline;
+}
+
+.btnAlignment {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
 }

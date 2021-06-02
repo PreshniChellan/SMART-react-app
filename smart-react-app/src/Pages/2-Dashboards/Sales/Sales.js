@@ -63,7 +63,7 @@ const useStyles = makeStyles({
 })
 
 
-export default function Sales(props) {
+
 
     let history = useHistory(); 
     
@@ -83,68 +83,12 @@ export default function Sales(props) {
     }
 
 
-    const classes = useStyles()
     
 
     return (
         <div>
             <Sidebar />
-            <div className='titleLine'>
-                <h2 className='headerTitle' >Make a sale and view your current history</h2>
-                
-            <div className='btnAlignment'>
-                <GenButton 
-                    value="Exchange"
-                    onClick={handleRoute1}
-                    className="exchangeBtn"
-                    style={exchangeBtnStyle}
-                    
-                />{' '}
-                <GenButton 
-                    value="New Sale"
-                    onClick={handleRoute2}
-                    className="newSaleBtn"
-                    style={newSaleBtnStyle}
-                />
-            </div>
-            </div><br /><br /><br />
-            <br /><br /><br />
-            
-            <TableContainer component={Paper}>
-                <Table className={classes.table} >
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Receipt Number</TableCell>
-                            <TableCell align="left">Date</TableCell>
-                            <TableCell align="left">Time</TableCell>
-                            <TableCell align="left">Customer</TableCell>
-                            <TableCell align="left">Product</TableCell>
-                            <TableCell align="left">Variable</TableCell>
-                            <TableCell align="left">Qty</TableCell>
-                            <TableCell align="left">Line LineValue</TableCell>
-                            <TableCell align="left">User</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.map((row) => (
-                            <TableRow key={row.ReceiptNumber}>
-                                <TableCell component="th" scope="row">
-                                    {row.ReceiptNumber}
-                                </TableCell>
-                                <TableCell align="left">{row.Date}</TableCell>
-                                <TableCell align="left">{row.Time}</TableCell>
-                                <TableCell align="left">{row.Customer}</TableCell>
-                                <TableCell align="left">{row.Product}</TableCell>
-                                <TableCell align="left">{row.Variable}</TableCell>
-                                <TableCell align="left">{row.Qty}</TableCell>
-                                <TableCell align="left">{row.LineValue}</TableCell>
-                                <TableCell align="left">{row.User}</TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-            
+
         </div>
     )
 }

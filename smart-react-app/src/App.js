@@ -36,6 +36,8 @@ import Opportunities from './Pages/7-Reporting/Opportunities/Opportunities'
 
 import MainSettings from './Pages/8-MainSettings/MainSettings'
 
+import RegisterDevice from './Pages/1-Sell/Make a Sale/RegisterDevice'
+
 
 function App() {
   return (
@@ -85,6 +87,7 @@ function App() {
 
         {/* Routing for Settings on SideNav */}
         <Route exact path="/MainSettings" component={MainSettings} />
+
 
       </Switch>
     </Router>

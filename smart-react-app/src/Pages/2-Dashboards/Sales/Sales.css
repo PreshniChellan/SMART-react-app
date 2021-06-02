@@ -1,4 +1,10 @@
 .content {
-    transition: 300ms;
     margin-left: 25px;
+    
 }
+
+.buttons {
+    float: right;
+    margin-right: 25px;
+}
+

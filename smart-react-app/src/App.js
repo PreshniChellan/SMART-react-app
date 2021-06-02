@@ -88,8 +88,6 @@ function App() {
         {/* Routing for Settings on SideNav */}
         <Route exact path="/MainSettings" component={MainSettings} />
 
-        {/* Routing for Additional Pages within Site */}
-        <Route exact path="/RegisterDevice" component={RegisterDevice} />
 
       </Switch>
     </Router>

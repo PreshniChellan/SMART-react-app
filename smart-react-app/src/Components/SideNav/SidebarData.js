@@ -32,6 +32,11 @@ export const SidebarData = [
                 icon: <RiExchangeFill style={iconStyle} />,
             },
             {
+                title: 'Sales',
+                path: '/Sales',
+                icon: <FaRegHandshake style={iconStyle} />,
+            },
+            {
                 title: 'Register',
                 path: 'Register',
                 icon: <AiOutlineUsergroupAdd style={iconStyle} />,
@@ -64,11 +69,6 @@ export const SidebarData = [
         icon: <BsGraphUp style={iconStyle} />,
         cName: 'nav-text',
         subNav:[
-            {
-                title: 'Sales',
-                path: '/Sales',
-                icon: <FaRegHandshake style={iconStyle} />,
-            },
             {
                 title: 'Targets',
                 path: '/Targets',

@@ -14,7 +14,7 @@ import Inventory from './Pages/2-Dashboards/Inventory/Inventory';
 import Leads from './Pages/2-Dashboards/Leads/Leads';
 import Replacements from './Pages/2-Dashboards/Replacements/Replacements';
 import Targets from './Pages/2-Dashboards/Targets/Targets';
-import Sales from './Pages/2-Dashboards/Sales/Sales';
+import Sales from './Pages/1-Sell/Sales/Sales';
 
 import Catalog from './Pages/3-Inventory/Catalog/Catalog'
 import InvSettings from './Pages/3-Inventory/InvSettings/InvSettings'
@@ -48,14 +48,14 @@ function App() {
         
         {/* Routing for Sell on SideNav */}
         <Route exact path="/Cash" component={Cash} />
+        <Route exact path="/Sales" component={Sales} />
         <Route exact path="/Customers" component={Customers} />
         <Route exact path="/History" component={History} />
         <Route exact path="/MakeSale" component={MakeSale} />
         <Route exact path="/Register" component={Register} />
         <Route exact path="/SellSettings" component={SellSettings} />
 
-        {/* Routing for Dashboards on SideNav */}
-        <Route exact path="/Sales" component={Sales} />
+        {/* Routing for Dashboards on SideNav */}        
         <Route exact path="/Inventory" component={Inventory} />
         <Route exact path="/Leads" component={Leads} />
         <Route exact path="/Replacements" component={Replacements} />

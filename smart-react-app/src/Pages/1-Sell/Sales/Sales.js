@@ -1,16 +1,18 @@
-import '../InventoryPages.css'
+import '../SellPages.css'
+import { useHistory } from 'react-router-dom'
 import Sidebar from '../../../Components/SideNav/Sidebar'
 import GenButton from '../../../Components/Buttons/GenButton'
-import { useHistory } from 'react-router-dom'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+
 import "react-datepicker/dist/react-datepicker.css";
 
 
+    
 
-export default function Stock() {
+    export default function Sales() {
 
-    let history = useHistory(); 
+        let history = useHistory(); 
     
         const handleRoute1 = () =>{
             history.push("/Home")
@@ -22,7 +24,7 @@ export default function Stock() {
         const [startDate, setStartDate] = useState(new Date());
         const [endDate, setEndDate] = useState(new Date());
 
-        const IntakeBtn = {
+        const exchangeBtnStyle = {
             marginLeft: 150,
         }
         
@@ -35,30 +37,23 @@ export default function Stock() {
         }
 
 
-
-    return (
-        <div style={{paddingBottom:50}}>
-            <Sidebar />
-            <div className='titleLine'>
-                <h2 className='headerTitle'>Manage your inventory.</h2>
+        return (
+            <div style={{paddingBottom:50}}>
+                <Sidebar />
+                <div className='titleLine'>
+                <h2 className='headerTitle'>Make a sale and view your current history</h2>
                 
             <div className='btnAlignment'>
                 <GenButton 
-                    value="Export"
-                    onClick={'#'}
+                    value="Exchange"
+                    onClick={handleRoute1}
                     className="exchangeBtn"
+                    style={exchangeBtnStyle}
                     
                 />{' '}
                 <GenButton 
-                    value="Intake"
-                    onClick={'#'}
-                    className="exchangeBtn"
-                    style={IntakeBtn}
-                    
-                />{' '}
-                <GenButton 
-                    value="Allocate"
-                    onClick={'#'}
+                    value="New Sale"
+                    onClick={handleRoute2}
                     className="newSaleBtn"
                     style={newSaleBtnStyle}
                 />
@@ -68,34 +63,24 @@ export default function Stock() {
             <div className="FlexContainer">
                 
                     <div className="FlexChild">
-                        <p>User</p>
-                        <select>
-                            <option>Select an Option</option>
-                            <option>Option 1</option>
-                        </select>
-                    </div>
-                    <div className="FlexChild">
-                        <p>Product</p>
-                        <select>
-                            <option>Select an Option</option>
-                            <option>Option 1</option>
-                        </select>
-                    </div>
-                    <div className="FlexChild">
-                        <p>Measure</p>
-                        <select>
-                            <option>Select an Option</option>
-                            <option>Option 1</option>
-                        </select>
-                    </div>
-                    <div className="FlexChild">
                         <p>Date From</p>
                         <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-                        
                     </div>
                     <div className="FlexChild">
                         <p>Date To</p>
                         <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
+                    </div>
+                    <div className="FlexChild">
+                        <p>Product</p>
+                        <input />
+                    </div>
+                    <div className="FlexChild">
+                        <p>User</p>
+                        <input />
+                    </div>
+                    <div className="FlexChild">
+                        <p>Customer</p>
+                        <input />
                     </div>
                     <div className="UpdateBtn">
                         <br/><br/>
@@ -167,8 +152,13 @@ export default function Stock() {
                     </tr>
                 </table>
             </div>
+    
+    
+            </div>
+        )
 
-            
-        </div>
-    )
-}
+    }
+    
+
+    
+

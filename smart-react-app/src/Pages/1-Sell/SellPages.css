@@ -1,0 +1,53 @@
+/* SHARED CSS FOR ALL DASHBOARD->SELL PAGES */
+
+/* Table Styling */
+table {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 94%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.rowHighlight:hover {
+  background-color: lightblue;
+}
+
+
+
+/*  CSS FOR SALES PAGE STARTS HERE *********************************************/
+
+.titleLine {
+    margin-top:25px;
+}
+
+.headerTitle {
+    margin-left: 50px;
+    display: inline;
+}
+
+.btnAlignment {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+/* CONTAINER AND WRAPPER 1 */
+.FlexContainer {
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #F2F2F2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 105px;
+}
+
+/* CSS FOR SALES PAGE ENDS HERE ***************************************************/

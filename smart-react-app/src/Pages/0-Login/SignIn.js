@@ -11,13 +11,17 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom'
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css';
 import LoginLogo from './LoginLogo.png'
-import BackgroundImg1 from './BackgroundImg1.jpg'
+import BackgroundImg2 from './BackgroundImg2.jpg'
 
 
 
 function Copyright() {
+
   return (
+
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
@@ -34,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: `url(${BackgroundImg1})`,
+    backgroundImage: `url(${BackgroundImg2})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -123,10 +127,24 @@ export default function SignInSide() {
           </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
+
+              
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
               </Grid>
+
               <Grid item>
                 <Link href="#" variant="body2">
                   {"Pricing Plans"}

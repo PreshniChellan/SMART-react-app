@@ -1,0 +1,35 @@
+/* SHARED CSS FOR ALL DASHBOARD->SELL PAGES */
+
+
+/* Table Styling */
+table {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 94%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.rowHighlight:hover {
+  background-color: lightblue;
+}
+
+select {
+    width: 200px;
+    height: 24px;
+}
+
+input {
+    width: 200px;
+    height: 18px;
+}
+
+/* CSS FOR STOCK PAGE ********************************************************/
+

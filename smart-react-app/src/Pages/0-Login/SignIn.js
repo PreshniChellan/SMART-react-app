@@ -10,9 +10,12 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import { useHistory } from 'react-router-dom'
-import Popup from 'reactjs-popup'
-import 'reactjs-popup/dist/index.css';
 import LoginLogo from './LoginLogo.png'
 import BackgroundImg2 from './BackgroundImg2.jpg'
 
@@ -21,7 +24,7 @@ import BackgroundImg2 from './BackgroundImg2.jpg'
 function Copyright() {
 
   return (
-
+    //Copyright text under login//
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
@@ -32,7 +35,7 @@ function Copyright() {
     </Typography>
   );
 }
-
+{/* In-Component Styles go here */}
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
@@ -52,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   form: {
-    width: '75%', // Fix IE 11 issue.
+    width: '75%',
     marginTop: theme.spacing(5),
     borderStyle: 'solid',
     padding: 20,
@@ -73,11 +76,27 @@ const loginLogoStyle = {
     marginTop: 50,
 }
 
+
+
+
 export default function SignInSide() {
 
+  {/* Push to home on login */}
     const history = useHistory();
-
     const classes = useStyles();
+  
+  {/* Forgot Password Dialog open/close */}
+  const [FPOpen, setFPOpen] = React.useState(false);
+
+  const ForgotPassOpen = () => {setFPOpen(true); };
+  const ForgotPassClose = () => {setFPOpen(false); };
+
+  {/* Trial Account creation Dialog open/close */}
+  const [TAOpen, setTAOpen] = React.useState(false);
+
+  const TrialAccOpen = () => {setTAOpen(true); };
+  const TrialAccClose = () => {setTAOpen(false); };
+
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -127,28 +146,66 @@ export default function SignInSide() {
           </Button>
             <Grid container>
               <Grid item xs>
-
-              
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <Link href="#" variant="body2" onClick={ForgotPassOpen}>
+                    {"Forgot Password?"}
+                  </Link>
+                  {/* Forgot Password Popup Dialog Content */}
+                      <Dialog open={FPOpen} onClose={ForgotPassClose}>
+                        <DialogTitle>Forgot Password?</DialogTitle>
+                        <DialogContent>
+                          <DialogContentText>
+                            Please enter your Username below and we will send a reset to you shortly.
+                          </DialogContentText>
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="Username"
+                              label="Username"
+                              type="text"
+                              fullWidth
+                            />
+                          </DialogContent>
+                        <DialogActions>
+                          <Button onClick={ForgotPassClose} color="primary">
+                            Cancel
+                          </Button>
+                          <Button onClick={ForgotPassClose} color="primary">
+                            Subscribe
+                          </Button>
+                        </DialogActions>
+                      </Dialog>
               </Grid>
-
+           
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Pricing Plans"}
+              {/* Trial Account Popup Dialog Content */}
+                <Link href="#" variant="body2" onClick={TrialAccOpen}>
+                  {"Get Trial Account?"}
                 </Link>
+                      <Dialog open={TAOpen} onClose={TrialAccClose}>
+                        <DialogTitle>14 Free Trial Account Setup</DialogTitle>
+                        <DialogContent>
+                          <DialogContentText>
+                            To set up a trial account, please fill in the details below. After a review, you will receive the details for intitial login via email.
+                          </DialogContentText>
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="Username"
+                              label="Username"
+                              type="text"
+                              fullWidth
+                            />
+                          </DialogContent>
+                        <DialogActions>
+                          <Button onClick={TrialAccClose} color="primary">
+                            Cancel
+                          </Button>
+                          <Button onClick={TrialAccClose} color="primary">
+                            Subscribe
+                          </Button>
+                        </DialogActions>
+                      </Dialog>
+
               </Grid>
             </Grid>
             <Box mt={5}>

@@ -170,7 +170,7 @@ export default function SignInSide() {
                             Cancel
                           </Button>
                           <Button onClick={ForgotPassClose} color="primary">
-                            Subscribe
+                            Submit
                           </Button>
                         </DialogActions>
                       </Dialog>
@@ -185,13 +185,77 @@ export default function SignInSide() {
                         <DialogTitle>14 Free Trial Account Setup</DialogTitle>
                         <DialogContent>
                           <DialogContentText>
-                            To set up a trial account, please fill in the details below. After a review, you will receive the details for intitial login via email.
+                            To set up a trial account, please fill in the details below. After review, you will receive the details for intitial login via email.
                           </DialogContentText>
                             <TextField
                               autoFocus
                               margin="dense"
-                              id="Username"
-                              label="Username"
+                              id="FullName"
+                              label="Full Name"
+                              type="text"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="Email"
+                              label="Email"
+                              type="email"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="ContactNumber"
+                              label="Contact Number"
+                              type="tel"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="BusinessName"
+                              label="BusinessName"
+                              type="text"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="BusinessType"
+                              label="Business Type"
+                              type="text"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="NumOfStores"
+                              label="Number of Stores"
+                              type="number"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="AnnualTurnover"
+                              label="Annual Turnover in ZAR"
+                              type="text"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="Password"
+                              label="Password"
+                              type="text"
+                              fullWidth
+                            />
+                            <TextField
+                              autoFocus
+                              margin="dense"
+                              id="ConfirmPassword"
+                              label="Confirm Password"
                               type="text"
                               fullWidth
                             />
@@ -201,7 +265,7 @@ export default function SignInSide() {
                             Cancel
                           </Button>
                           <Button onClick={TrialAccClose} color="primary">
-                            Subscribe
+                            Submit
                           </Button>
                         </DialogActions>
                       </Dialog>

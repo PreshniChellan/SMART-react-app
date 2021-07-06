@@ -1,0 +1,36 @@
+/* Main Header and Top button alignments*/
+
+.headerTitle {
+    margin-left: 50px;
+    display: inline;
+}
+
+.btnAlignment {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+/* Table Styling */
+table {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 94%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.rowHighlight:hover {
+  background-color: lightblue;
+}
+
+
+/*  CSS FOR Inventory Dashboard PAGE STARTS HERE *********************************************/
+

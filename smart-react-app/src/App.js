@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Login from './Pages/0-Login/SignIn'
 import Home from './Pages/Home/Home'
 
+/* Main SideNav Pages start Here Pages *****************************************************/
+
 /* Sell SideNav Pages */
 import Cash from './Pages/1-Sell/Cash/Cash'
 import Customers from './Pages/1-Sell/Customers/Customers'
@@ -48,8 +50,24 @@ import Opportunities from './Pages/7-Reporting/Opportunities/Opportunities'
 /* Main Settings */
 import MainSettings from './Pages/8-MainSettings/MainSettings'
 
+/* Main SideNav Pages End Here Pages *****************************************************/
+
+/* Inner Site Pages start Here Pages *****************************************************/
+
+  /* Sell Inner Pages */
 
 
+  /* Dashboards Inner Pages */
+  import InventoryRetail from './Pages/2-Dashboards/Inventory/InventoryRetail'
+  import InventorySalesReps from './Pages/2-Dashboards/Inventory/InventorySalesReps'
+  import InventoryWarehouse from './Pages/2-Dashboards/Inventory/InventoryWarehouse'
+
+  /* Inventory Inner Pages */
+
+
+  /* Payments Inner Pages */
+
+  /* Leads Inner Pages */
 
 function App() {
   return (
@@ -58,6 +76,7 @@ function App() {
         <Route exact path="/" component={Login} />
         <Route exact path="/Home" component={() => <Home authorized={true} />} />
         
+        {/* Routing for Main SideNav Pages Starts Here Pages ************************************/}
         {/* Routing for Sell on SideNav */}
         <Route exact path="/Cash" component={Cash} />
         <Route exact path="/Sales" component={Sales} />
@@ -100,9 +119,16 @@ function App() {
         {/* Routing for Settings on SideNav */}
         <Route exact path="/MainSettings" component={MainSettings} />
 
+        {/* Routing for Main SideNav Pages Ends Here Pages ************************************/}
+        {/* Inner Site Pages start Here Pages *************************************************/}
+
         {/* Routing for pages within the site */}
         <Route exact path="/RegisterDevice" component={RegisterDevice} />
 
+      {/* Dashboards Inner Page Routing */}
+        <Route exact path="/InventoryRetail" component={InventoryRetail} />
+        <Route exact path="/InventorySalesReps" component={InventorySalesReps} />
+        <Route exact path="/InventoryWarehouse" component={InventoryWarehouse} />
 
       </Switch>
     </Router>

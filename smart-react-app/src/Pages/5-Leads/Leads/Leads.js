@@ -1,12 +1,12 @@
 import Sidebar from '../../../Components/SideNav/Sidebar'
 
 
-export default function Management() {
+export default function Leads() {
 
     return (
         <div>
             <Sidebar />
-            <h2>Management Page</h2>
+            <h2>Leads Page</h2>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillHome, AiOutlineFolderOpen, AiOutlineUsergroupAdd } from 'react-icons/ai'
 import { FaRegHandshake, FaBoxes, FaRegCreditCard, FaRegClipboard, FaTools, FaCashRegister, FaSitemap, FaBook, FaStoreAlt, FaMoneyBill } from 'react-icons/fa'
 import { BsGraphUp, BsPeopleFill } from 'react-icons/bs'
-import { RiTeamFill,  RiStockFill, RiExchangeFill } from 'react-icons/ri'
+import { RiTeamFill,  RiStockFill, RiExchangeFill, RiExchangeDollarFill } from 'react-icons/ri'
 import { GiReceiveMoney, GiMeepleGroup } from 'react-icons/gi'
 import { BiHistory } from 'react-icons/bi'
 import { MdSettings, MdFolderSpecial } from 'react-icons/md'
@@ -70,6 +70,16 @@ export const SidebarData = [
         cName: 'nav-text',
         subNav:[
             {
+                title: 'Inventory',
+                path: '/Inventory',
+                icon: <FaBoxes style={iconStyle} />,
+            },
+            {
+                title: 'Sales',
+                path: '/SalesDash',
+                icon: <RiExchangeDollarFill style={iconStyle} />,
+            },
+            {
                 title: 'Targets',
                 path: '/Targets',
                 icon: <ImTarget style={iconStyle} />,
@@ -79,11 +89,7 @@ export const SidebarData = [
                 path: '/Leads',
                 icon: <AiOutlineFolderOpen style={iconStyle} />,
             },
-            {
-                title: 'Inventory',
-                path: '/Inventory',
-                icon: <FaBoxes style={iconStyle} />,
-            },
+            
             {
                 title: 'Replacements',
                 path: '/Replacements',
@@ -153,12 +159,12 @@ export const SidebarData = [
                 icon: <VscReferences style={iconStyle} />,
             },
             {
-                title: 'Management',
-                path: '/Management',
+                title: 'Leads',
+                path: '/Leads',
                 icon: <SiManageiq style={iconStyle} />,
             },
             {
-                title: 'LeadSettings',
+                title: 'Lead Settings',
                 path: '/LeadSettings',
                 icon: <MdSettings style={iconStyle} />,
             },

@@ -1,4 +1,5 @@
 import Sidebar from '../../../Components/SideNav/Sidebar'
+import '../Leads.css'
 
 
 export default function Referrals() {
@@ -6,7 +7,8 @@ export default function Referrals() {
     return (
         <div>
             <Sidebar />
-            <h2>Referrals Page</h2>
+            <br />
+            <h2 className='headerTitle'>Referrals Page</h2>
         </div>
     )
 }

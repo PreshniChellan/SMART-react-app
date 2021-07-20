@@ -16,13 +16,15 @@ import MakeSale from './Pages/1-Sell/Make a Sale/MakeSale'
 import RegisterDevice from './Pages/1-Sell/Make a Sale/RegisterDevice'
 import Register from './Pages/1-Sell/Register/Register'
 import SellSettings from './Pages/1-Sell/SellSettings/SellSettings'
+import Sales from './Pages/1-Sell/Sales/Sales';
 
 /* Dashboard SideNav Pages */
 import Inventory from './Pages/2-Dashboards/Inventory/Inventory';
 import Leads from './Pages/2-Dashboards/Leads/Leads';
 import Replacements from './Pages/2-Dashboards/Replacements/Replacements';
 import Targets from './Pages/2-Dashboards/Targets/Targets';
-import Sales from './Pages/1-Sell/Sales/Sales';
+import SalesDash from './Pages/2-Dashboards/Sales/SalesDash';
+
 
 /* Inventory SideNav Pages */
 import Catalog from './Pages/3-Inventory/Catalog/Catalog'
@@ -37,7 +39,7 @@ import Payroll from './Pages/4-Payments/Payroll/Payroll'
 
 /* Leads SideNav Pages */
 import Referrals from './Pages/5-Leads/Referrals/Referrals'
-import Management from './Pages/5-Leads/Management/Management'
+import LeadsPage from './Pages/5-Leads/Leads/Leads'
 import LeadSettings from './Pages/5-Leads/LeadSettings/LeadSettings'
 
 /* Teams SideNav Pages */
@@ -88,6 +90,7 @@ function App() {
 
         {/* Routing for Dashboards on SideNav */}        
         <Route exact path="/Inventory" component={Inventory} />
+        <Route exact path="/SalesDash" component={SalesDash} />
         <Route exact path="/Leads" component={Leads} />
         <Route exact path="/Replacements" component={Replacements} />
         <Route exact path="/Targets" component={Targets} />
@@ -105,7 +108,7 @@ function App() {
 
         {/* Routing for Leads on SideNav */}
         <Route exact path="/Referrals" component={Referrals} />
-        <Route exact path="/Management" component={Management} />
+        <Route exact path="/Leads" component={LeadsPage} />
         <Route exact path="/LeadSettings" component={LeadSettings} />
 
         {/* Routing for Teams on SideNav */}

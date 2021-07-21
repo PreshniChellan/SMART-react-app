@@ -1,6 +1,8 @@
 import Sidebar from '../../../Components/SideNav/Sidebar'
 import '../Leads.css'
 
+import LoadRef from '../Leads Components/LoadRef'
+
 
 export default function Referrals() {
 
@@ -8,7 +10,7 @@ export default function Referrals() {
         <div>
             <Sidebar />
             <br />
-            <h2 className='headerTitle'>Referrals Page</h2>
+            <LoadRef />
         </div>
     )
 }

@@ -129,7 +129,7 @@ export default function LoadRef() {
                     <GenButton 
                         value="Save Referral"
                         onClick={SaveRefRoute}
-                        className="SaveRefBtn"
+                        className="LeadSaveRefBtn"
                         style={{MarginTop:55}}
                     />
                 </div> 

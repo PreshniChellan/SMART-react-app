@@ -1,4 +1,4 @@
-import '../Leads Components/LeadComponents.css';
+import '../Leads.css';
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom'
 import DatePicker from "react-datepicker";
@@ -129,7 +129,7 @@ export default function LoadRef() {
                     <GenButton 
                         value="Save Referral"
                         onClick={SaveRefRoute}
-                        className="SaveRefBtn"
+                        className="LeadSaveRefBtn"
                         style={{MarginTop:55}}
                     />
                 </div> 

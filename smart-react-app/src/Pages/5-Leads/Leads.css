@@ -15,6 +15,26 @@
     height: 105px;
 }
 
+/* Table Styling */
+table {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 94%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.rowHighlight:hover {
+  background-color: lightblue;
+}
+
 /* Back button on Process Leads Page */
 
 .BackBtnAlignment {
@@ -25,4 +45,37 @@
 /* Leads Quali component */
 .FlexChild {
     width: 200px;
+}
+
+
+/* Save button ref on LoadRefs component */
+.LeadSaveRefBtn {
+    margin-top: 45px;
+}
+
+.LeadsUpdateBtn {
+    margin-top: 45px;
+}
+
+
+.FlexChild {
+    width: 200px;
+}
+/* Modal content alignment on ToggleModal component */
+#transition-modal-title {
+    margin-left:40%;    
+}
+
+/* ProcessLeadConverted page */
+
+.PLConvertedUpdateBtn {
+    margin-left: 50px;
+    padding-bottom: 25px;
+}
+
+/* Inner Lead pages Save and Back button Div Alignment */
+
+.SaveAndBackBtnAlignment {
+    float: right;
+    margin-right: 50px;
 }

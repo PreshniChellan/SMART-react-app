@@ -39,7 +39,7 @@ import Payroll from './Pages/4-Payments/Payroll/Payroll'
 
 /* Leads SideNav Pages */
 import Referrals from './Pages/5-Leads/Referrals/Referrals'
-import LeadsPage from './Pages/5-Leads/Leads/Leads'
+import LeadsPage from './Pages/5-Leads/Leads/LeadsPage'
 import LeadSettings from './Pages/5-Leads/LeadSettings/LeadSettings'
 
 /* Teams SideNav Pages */
@@ -70,6 +70,7 @@ import MainSettings from './Pages/8-MainSettings/MainSettings'
   /* Payments Inner Pages */
 
   /* Leads Inner Pages */
+  import ProcessLead from './Pages/5-Leads/Leads/ProcessLead'
 
 function App() {
   return (
@@ -108,7 +109,7 @@ function App() {
 
         {/* Routing for Leads on SideNav */}
         <Route exact path="/Referrals" component={Referrals} />
-        <Route exact path="/Leads" component={LeadsPage} />
+        <Route exact path="/LeadsPage" component={LeadsPage} />
         <Route exact path="/LeadSettings" component={LeadSettings} />
 
         {/* Routing for Teams on SideNav */}
@@ -132,6 +133,7 @@ function App() {
         <Route exact path="/InventoryRetail" component={InventoryRetail} />
         <Route exact path="/InventorySalesReps" component={InventorySalesReps} />
         <Route exact path="/InventoryWarehouse" component={InventoryWarehouse} />
+        <Route exact path="/ProcessLead" component={ProcessLead} />
 
       </Switch>
     </Router>

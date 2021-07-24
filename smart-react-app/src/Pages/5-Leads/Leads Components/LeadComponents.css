@@ -13,3 +13,16 @@
 .SaveRefBtn {
     margin-top: 45px;
 }
+
+.LeadsUpdateBtn {
+    margin-top: 45px;
+}
+
+
+.FlexChild {
+    width: 200px;
+}
+/* Modal content alignment on ToggleModal component */
+#transition-modal-title {
+    margin-left:40%;    
+}

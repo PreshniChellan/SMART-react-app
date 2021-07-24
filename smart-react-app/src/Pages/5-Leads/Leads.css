@@ -4,3 +4,25 @@
     margin-left: 50px;
     display: inline;
 }
+
+.FlexContainer {
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #F2F2F2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 105px;
+}
+
+/* Back button on Process Leads Page */
+
+.BackBtnAlignment {
+    float: right;
+    margin-right: 50px;
+}
+
+/* Leads Quali component */
+.FlexChild {
+    width: 200px;
+}

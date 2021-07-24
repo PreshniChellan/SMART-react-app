@@ -1,8 +1,10 @@
-import './LeadComonents.css';
+import '../Leads Components/LeadComponents.css';
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom'
 import DatePicker from "react-datepicker";
 import GenButton from "../../../Components/Buttons/GenButton"
+import ToggleModal from '../Leads Components/ToggleModal'
+
 
 
 export default function LoadRef() {
@@ -15,11 +17,12 @@ export default function LoadRef() {
             history.push("/Leads")
         }
 
+        
+
     return(
         <>
         <h2 className='headerTitle'>Load referal below.</h2>
         <br /><br />
-        <form>
             <div className="Container_One">
                 <div className="FlexContainer">
                     
@@ -67,11 +70,12 @@ export default function LoadRef() {
             </div>
             <br />
             <h2 className='headerTitle'>Now let's allocate this lead.</h2>
-            <br />
+            <br /><br />
+            <div className="ContainerTwo">
             <div className="FlexContainer">
                 <div className="FlexChild">
                     <p>Allocate To</p>
-                    <input placeholder="Dropdown of users or random?" />
+                    <input />
                 </div>
                 <div className="FlexChild">
                     <p>Source</p>
@@ -93,7 +97,9 @@ export default function LoadRef() {
                 </div>
                 <div className="FlexChild">
                     <p>Contact Consent</p>
-                    <p>Slider goes here</p>
+                    <ToggleModal />
+                    
+                    
                 </div>
             </div>
             <div className="FlexContainer">
@@ -116,19 +122,20 @@ export default function LoadRef() {
                 </div>
                 <div className="FlexChild">
                     <p>Referral Notes</p>
-                    <textarea />
-                </div>                
-                    <p></p>
+                    <input />
+                </div> 
+                <div className="FlexChild">
+                    <br /><br />
                     <GenButton 
                         value="Save Referral"
                         onClick={SaveRefRoute}
                         className="SaveRefBtn"
+                        style={{MarginTop:55}}
                     />
-                
+                </div> 
+                                               
             </div>
-
-
-        </form>
+            </div>
 
         </>
     )

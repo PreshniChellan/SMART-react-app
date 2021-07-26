@@ -1,0 +1,32 @@
+/*  CSS FOR All TEAMS PAGES STARTS HERE *********************************************/
+
+.headerTitle {
+    margin-left: 50px;
+    display: inline;
+}
+
+/* Alignment for button floating right on top of pages (if any) */
+.btnAlignment {
+    float: right;
+    margin-right: 50px;
+}
+
+/* Table Styling */
+table {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 94%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.rowHighlight:hover {
+  background-color: lightblue;
+}

@@ -9,6 +9,7 @@ import { MdSettings, MdFolderSpecial } from 'react-icons/md'
 import { VscReferences } from 'react-icons/vsc'
 import { SiManageiq } from 'react-icons/si'
 import { ImTarget } from 'react-icons/im'
+import { FiUsers } from 'react-icons/fi'
 
 const iconStyle = {
     color: '#2DAAD6'
@@ -171,11 +172,16 @@ export const SidebarData = [
         ]
     },
     {
-        title: 'Users',
+        title: 'Teams',
         icon: <RiTeamFill style={iconStyle} />,
         cName: 'nav-text',
 
         subNav:[
+            {
+                title: 'Users',
+                path: '/Users',
+                icon: <FiUsers style={iconStyle} />,
+            },
             {
                 title: 'Teams',
                 path: '/Teams',

@@ -161,7 +161,7 @@ export const SidebarData = [
             },
             {
                 title: 'Leads',
-                path: '/Leads',
+                path: '/LeadsPage',
                 icon: <SiManageiq style={iconStyle} />,
             },
             {

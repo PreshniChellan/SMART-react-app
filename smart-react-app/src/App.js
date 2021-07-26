@@ -39,7 +39,7 @@ import Payroll from './Pages/4-Payments/Payroll/Payroll'
 
 /* Leads SideNav Pages */
 import Referrals from './Pages/5-Leads/Referrals/Referrals'
-import LeadsPage from './Pages/5-Leads/Leads/Leads'
+import LeadsPage from './Pages/5-Leads/Leads/LeadsPage'
 import LeadSettings from './Pages/5-Leads/LeadSettings/LeadSettings'
 
 /* Teams SideNav Pages */
@@ -73,6 +73,18 @@ import MainSettings from './Pages/8-MainSettings/MainSettings'
   /* Payments Inner Pages */
 
   /* Leads Inner Pages */
+  import ProcessLead from './Pages/5-Leads/Leads/ProcessLead'
+  import NewCampaign from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/NewCampaign'
+  import EditCampaign from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/EditCampaign'
+  import NewAwareness from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/NewAwareness'
+  import EditAwareness from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/EditAwareness'
+  import NewLeadStatus from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/NewLeadStatus'
+  import EditLeadStatus from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/EditLeadStatus'
+  import CreateAppOutcome from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/CreateAppOutcome'
+  import EditAppOutcome from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/EditAppOutcome'
+  import CreateCallOutcome from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/CreateCallOutcome'
+  import EditCallOutcome from './Pages/5-Leads/Leads Components/Leads Settings/Lead Setting Inner Pages/EditCallOutcome'
+
 
   /* Teams Inner Pages*/
   import UserDocs from './Pages/6-Teams/1. Users/UserDocs'
@@ -124,7 +136,7 @@ function App() {
 
         {/* Routing for Leads on SideNav */}
         <Route exact path="/Referrals" component={Referrals} />
-        <Route exact path="/Leads" component={LeadsPage} />
+        <Route exact path="/LeadsPage" component={LeadsPage} />
         <Route exact path="/LeadSettings" component={LeadSettings} />
 
         {/* Routing for Teams on SideNav */}
@@ -142,7 +154,7 @@ function App() {
         <Route exact path="/MainSettings" component={MainSettings} />
 
         {/* Routing for Main SideNav Pages Ends Here Pages ************************************/}
-        
+
         {/* Inner Site Pages start Here Pages *************************************************/}
 
         {/* Routing for pages within the site */}
@@ -152,6 +164,21 @@ function App() {
         <Route exact path="/InventoryRetail" component={InventoryRetail} />
         <Route exact path="/InventorySalesReps" component={InventorySalesReps} />
         <Route exact path="/InventoryWarehouse" component={InventoryWarehouse} />
+        <Route exact path="/ProcessLead" component={ProcessLead} />
+
+        {/* Leads Inner Page Routing */}
+        <Route exact path="/NewCampaign" component={NewCampaign} />
+        <Route exact path="/EditCampaign" component={EditCampaign} />
+        <Route exact path="/NewAwareness" component={NewAwareness} />
+        <Route exact path="/EditAwareness" component={EditAwareness} />
+        <Route exact path="/NewLeadStatus" component={NewLeadStatus} />
+        <Route exact path="/EditLeadStatus" component={EditLeadStatus} />
+        <Route exact path="/CreateAppOutcome" component={CreateAppOutcome} />
+        <Route exact path="/EditAppOutcome" component={EditAppOutcome} />
+        <Route exact path="/CreateCallOutcome" component={CreateCallOutcome} />
+        <Route exact path="/EditCallOutcome" component={EditCallOutcome} />
+
+
 
       {/* Teams Inner Page Routing */}
       <Route exact path="/UserDocs" component={UserDocs} />

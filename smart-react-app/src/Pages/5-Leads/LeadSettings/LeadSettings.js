@@ -1,4 +1,6 @@
 import Sidebar from '../../../Components/SideNav/Sidebar'
+import LeadSettingOptions from '../../5-Leads/Leads Components/Leads Settings/LeadSettingOptions'
+import LeadSettingTable from '../../5-Leads/Leads Components//Leads Settings/LeadSettingTable'
 
 
 export default function LeadSettings() {
@@ -6,7 +8,10 @@ export default function LeadSettings() {
     return (
         <div>
             <Sidebar />
-            <h2>LeadSettings Page</h2>
+            <br />
+            <LeadSettingOptions />
+            <br />
+            <LeadSettingTable />
         </div>
     )
 }

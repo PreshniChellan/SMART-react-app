@@ -43,8 +43,11 @@ import LeadsPage from './Pages/5-Leads/Leads/Leads'
 import LeadSettings from './Pages/5-Leads/LeadSettings/LeadSettings'
 
 /* Teams SideNav Pages */
-import Stores from './Pages/6-Teams/Stores/Stores'
-import Teams from './Pages/6-Teams/Teams/Teams'
+import Users from './Pages/6-Teams/1. Users/Users'
+import Teams from './Pages/6-Teams/2. Teams/Teams'
+import Stores from './Pages/6-Teams/3. Stores/Stores'
+import TeamTargets from './Pages/6-Teams/4. Targets/TeamTarget'
+
 
 /* Opportunities SideNav Pages */
 import Opportunities from './Pages/7-Reporting/Opportunities/Opportunities'
@@ -70,6 +73,19 @@ import MainSettings from './Pages/8-MainSettings/MainSettings'
   /* Payments Inner Pages */
 
   /* Leads Inner Pages */
+
+  /* Teams Inner Pages*/
+  import UserDocs from './Pages/6-Teams/1. Users/UserDocs'
+  import NewUser from './Pages/6-Teams/1. Users/NewUser'
+  import EditUser from './Pages/6-Teams/1. Users/EditUser'
+
+  import NewTeam from './Pages/6-Teams/2. Teams/NewTeam'
+  import EditTeam from './Pages/6-Teams/2. Teams/EditTeam'
+
+  import NewStore from './Pages/6-Teams/3. Stores/NewStore'
+  import EditStore from './Pages/6-Teams/3. Stores/EditStore'
+
+  import NewTarget from './Pages/6-Teams/4. Targets/NewTarget'
 
 function App() {
   return (
@@ -113,8 +129,11 @@ function App() {
 
         {/* Routing for Teams on SideNav */}
         {/* Routing to Target page done already in Dashboards */}
-        <Route exact path="/Stores" component={Stores} />
+        <Route exact path="/Users" component={Users} />
         <Route exact path="/Teams" component={Teams} />
+        <Route exact path="/TeamTargets" component={TeamTargets} />
+        <Route exact path="/Stores" component={Stores} />
+        
 
         {/* Routing for Reporting on SideNav */}
         <Route exact path="/Opportunities" component={Opportunities} />
@@ -123,6 +142,7 @@ function App() {
         <Route exact path="/MainSettings" component={MainSettings} />
 
         {/* Routing for Main SideNav Pages Ends Here Pages ************************************/}
+        
         {/* Inner Site Pages start Here Pages *************************************************/}
 
         {/* Routing for pages within the site */}
@@ -132,6 +152,16 @@ function App() {
         <Route exact path="/InventoryRetail" component={InventoryRetail} />
         <Route exact path="/InventorySalesReps" component={InventorySalesReps} />
         <Route exact path="/InventoryWarehouse" component={InventoryWarehouse} />
+
+      {/* Teams Inner Page Routing */}
+      <Route exact path="/UserDocs" component={UserDocs} />
+      <Route exact path="/NewUser" component={NewUser} />
+      <Route exact path="/EditUser" component={EditUser} />
+      <Route exact path="/NewTeam" component={NewTeam} />
+      <Route exact path="/EditTeam" component={EditTeam} />
+      <Route exact path="/NewStore" component={NewStore} />
+      <Route exact path="/EditStore" component={EditStore} />
+      <Route exact path="/NewTarget" component={NewTarget} />
 
       </Switch>
     </Router>

@@ -34,7 +34,7 @@ export const SearchBar = (props) => {
                     array.push(suggest);
                 }
             })
-    
+
             array.forEach(suggest => {
                 if(suggest.includes(e.target.value)){
                     setSearchedSuggestions(suggest);

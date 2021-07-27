@@ -55,10 +55,7 @@ tr:nth-child(odd) {
     padding: 20px;
 }
 
-.make__sale__left__container{
-
-}
-
+/* Left Container Styling */
 .make__sale__cart__icon{
     width: 4vh;
 }
@@ -113,12 +110,13 @@ tr:nth-child(odd) {
     height: 25px;
 }
 
+/* Right Container Styling  */
+
 .make__sale__right__container{
     position: absolute;
     top: 0;
     right: 10%;
     width: 40%;
-    height: 100%;
     padding: 50px;
 }
 

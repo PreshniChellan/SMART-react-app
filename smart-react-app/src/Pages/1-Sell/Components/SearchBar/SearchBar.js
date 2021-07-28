@@ -135,7 +135,7 @@ export const SearchBar = (props) => {
         <div>
             <input autocomplete="off" placeholder={props.placeholder ? props.placeholder: "Search something..."} id="search_user" onFocus={onFocus} onBlur={handleBlur} type="text" onKeyDown={onKeyDown}></input>
             <div className={fieldValue}>
-            {!loading ?  checkUser() : <SmallLoader size={[20, 20, -10]}/>}
+            {!loading && checkUser()}
             </div>
         </div>
     )

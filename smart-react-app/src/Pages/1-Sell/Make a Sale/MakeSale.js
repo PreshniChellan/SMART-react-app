@@ -16,6 +16,7 @@ import UserIcon from '../icons/user-solid.svg';
 import Popup from '../Components/popup/Popup';
 import Sidebar from '../../../Components/SideNav/Sidebar'
 import SmallLoader from '../Components/SmallLoader/SmallLoader';
+import Products from '../Components/Products/Products';
 
 export const MakeSale = (props) => {
 
@@ -27,7 +28,7 @@ export const MakeSale = (props) => {
     const [cart, setCart] = useState([]);
     const [cartLoading, setCartLoading] = useState(false);
     const [customer, setCustomer] = useState(null);
-    const [visibility, setVisibility] = useState("hidden");
+    const [popupVisibility, setPopupVisibility] = useState("hidden");
 
 //Test Data for search suggestions
     const data = {
@@ -76,6 +77,7 @@ export const MakeSale = (props) => {
 //On key down for searched name or number input to get the exact input.
     const onKeyDown = (e) => {
         setLoading(true); //Displays loader
+        setChooseItem(false);
 
         setTimeout(() => {//Set timeout so input can be grabbed after user types character.
             if(e.target.value === ""){
@@ -115,43 +117,12 @@ export const MakeSale = (props) => {
 
 //Test functions to add data to the screen.
     const selectItem = e => {
-        // setCartLoading(true);
-        // const temp_array = [...cart];
-        // temp_array.push({name: 'Heets Pack Red', price_ex: "299", price_in: "343.85"});
-        // setCart(temp_array);
-        // setCartLoading(false);
-        // console.log(cart);
-
-        props.setAlert("Something went wrong", 'danger');
-    }
-
-    const setPopup = () => {
-        setVisibility("Visible");
-    }
-
-//certain Data will be rendered depending on the click of the user and the category state.
-    const itemsChosen = (item) => {
-      //Checks if the state of category was not changed
-            if(!chooseItem && item !== undefined) {
-                return (<div id={item.id} onClick={getCategory} key = {item.id} className="make__sale__item">
-                            <span className="make__sale__quantity">{item.id}</span>
-                            <h5 className="make__sale__product">{item.id}</h5>
-                        </div>)
-            }
-            //If category state was changed.
-            else if(chooseItem && item !== undefined){
-                return (<div onClick={setPopup} key = {item.id} onClick={selectItem} className="make__sale__item">
-                <span className="make__sale__quantity">{item.id}</span>
-                <h5 id="make__sale__product">Heets Pack Red</h5>
-                <input type="hidden" id={item.id} value="Heets Pack Red"/>
-            </div>)
-            }
-            else{//If no data for this search can be found.
-                return (<div className="make__sale__error">
-                    <h3>Cannot Find Product By The Name of '{searchedName}'</h3>
-                </div>)
-            }
-
+        setCartLoading(true);
+        const temp_array = [...cart];
+        temp_array.push({name: 'Heets Pack Red', price_ex: "299", price_in: "343.85"});
+        setCart(temp_array);
+        setCartLoading(false);
+        console.log(cart);
     }
 
     //this functions will be sent to searchedSuggestions as a prop to get feedback.
@@ -163,28 +134,41 @@ export const MakeSale = (props) => {
         setCustomer(null);
     }
 
+    //Drop Item in cart to show info on it.
+    const dropItem = () => {
+
+    }
+
+    const exitFolder = async() => {
+      setChooseItem(false);
+      let data =  await returnJSON(`https://jsonplaceholder.typicode.com/posts?_limit=12`);
+      setItems(data);
+    }
+
+    const setPopup = () => {
+      setPopupVisibility("visible");
+    }
+
 
     return (
         <div>
             <Sidebar />
             <div className="make__sale__body">
-            <Popup/>
+            <Popup visibility={popupVisibility}/>
             <div className="make__sale__left__container">
                 <div className="make__sale__search__conatiner">
                 <img className="make__sale__cart__icon" src={shopping}/>
                 <h2>Looking for Something?</h2>
                 </div>
-                <input type="text" placeholder="Search for something" onKeyDown={onKeyDown} className="searchbar"></input>
+                <input type="text" placeholder="Search for something" onKeyDown={onKeyDown} className="make__sale__searchbar"></input>
                 <div id="search"></div>
                 <div id="make__items__body" className="make__sale__items">
-                    {!loading ? items.map(item => itemsChosen(item)) : <SmallLoader/>}
+                  <Products exitFolder={exitFolder} itemsChosen={chooseItem} setPopup={setPopup} items={items} searchedName={searchedName} getCategory={getCategory} loading={loading}/>
                 </div>
             </div>
             <div className="make__sale__right__container">
                 <div className="make__sale__extra">
-                    <a>Promo</a>
-                    <a>Discount</a>
-                    <a>Sale Note</a>
+
                 </div>
 
                 {!customer ? (<div className="make__sale__search_user">
@@ -198,13 +182,14 @@ export const MakeSale = (props) => {
 
                 <div className="make__sale__user__details">
                     <div className="make__sale__items__container">
-                        {!cartLoading ? cart.map(item => (<div className="make__sale__cart">
+                        {!cartLoading && cart.map(item => (<div className="make__sale__cart">
 
                         <h5>{item.name}</h5>
-                        <h5>{item.price_ex}</h5>
-                        <h5>{item.price_in}</h5>
+                        <div className="make__sale__item-info">
 
-                        </div>)) : <SmallLoader style={{margin: 'auto'}}/>}
+                        </div>
+
+                        </div>))}
                     </div>
                     <div className="make__sale__sale__details">
                         <div>

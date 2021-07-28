@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import '../SellPages.css';
 
+//Redux Required imports.
+import { connect } from 'react-redux';
+import { setAlert } from '../../../actions/alert';
+import propTypes from 'prop-types';
+
 //Icons Imported
 import shopping from '../icons/shopping-cart-solid.svg';
 import user from '../icons/user-plus-solid.svg';
@@ -12,7 +17,7 @@ import Popup from '../Components/popup/Popup';
 import Sidebar from '../../../Components/SideNav/Sidebar'
 import SmallLoader from '../Components/SmallLoader/SmallLoader';
 
-export const MakeSale = () => {
+export const MakeSale = (props) => {
 
 //States
     const [items, setItems] = useState(null);
@@ -48,8 +53,6 @@ export const MakeSale = () => {
 
         return data; //returns data from the API.
     }
-
-
     useEffect(() => {
       //Async function that will fetch posts from backend.
         async function fetchItems(){
@@ -112,12 +115,14 @@ export const MakeSale = () => {
 
 //Test functions to add data to the screen.
     const selectItem = e => {
-        setCartLoading(true);
-        const temp_array = [...cart];
-        temp_array.push({name: 'Heets Pack Red', price_ex: "299", price_in: "343.85"});
-        setCart(temp_array);
-        setCartLoading(false);
-        console.log(cart);
+        // setCartLoading(true);
+        // const temp_array = [...cart];
+        // temp_array.push({name: 'Heets Pack Red', price_ex: "299", price_in: "343.85"});
+        // setCart(temp_array);
+        // setCartLoading(false);
+        // console.log(cart);
+
+        props.setAlert("Something went wrong", 'danger');
     }
 
     const setPopup = () => {
@@ -222,4 +227,8 @@ export const MakeSale = () => {
     )
 }
 
-export default MakeSale
+MakeSale.propTypes = {
+  setAlert: propTypes.func.isRequired
+}
+
+export default connect(null, {setAlert})(MakeSale);

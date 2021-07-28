@@ -2,6 +2,13 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
+//Redux
+import { Provider } from 'react-redux';
+import store from './store';
+
+//Alerts
+import Alert from './Components/Alert/Alert';
+
 /* Home and Login Pages */
 import Login from './Pages/0-Login/SignIn'
 import Home from './Pages/Home/Home'
@@ -101,11 +108,13 @@ import MainSettings from './Pages/8-MainSettings/MainSettings'
 
 function App() {
   return (
+    <Provider store={store}>
+    <Alert/>
     <Router>
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/Home" component={() => <Home authorized={true} />} />
-        
+
         {/* Routing for Main SideNav Pages Starts Here Pages ************************************/}
         {/* Routing for Sell on SideNav */}
         <Route exact path="/Cash" component={Cash} />
@@ -116,7 +125,7 @@ function App() {
         <Route exact path="/Register" component={Register} />
         <Route exact path="/SellSettings" component={SellSettings} />
 
-        {/* Routing for Dashboards on SideNav */}        
+        {/* Routing for Dashboards on SideNav */}
         <Route exact path="/Inventory" component={Inventory} />
         <Route exact path="/SalesDash" component={SalesDash} />
         <Route exact path="/Leads" component={Leads} />
@@ -145,7 +154,7 @@ function App() {
         <Route exact path="/Teams" component={Teams} />
         <Route exact path="/TeamTargets" component={TeamTargets} />
         <Route exact path="/Stores" component={Stores} />
-        
+
 
         {/* Routing for Reporting on SideNav */}
         <Route exact path="/Opportunities" component={Opportunities} />
@@ -192,8 +201,8 @@ function App() {
 
       </Switch>
     </Router>
+    </Provider>
   );
 }
 
 export default App;
-        

@@ -247,11 +247,34 @@ tr:nth-child(odd) {
 .make__sale__cart{
     background: red;
     width: 100%;
-    height: 100px;
+    height: 30px;
+    transition: 0.4s ease-in;
+    position: relative;
 }
 
-.make__sale__cart h5{
-    margin: 10px;
+.inner-top-cart{
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.cart-collapse{
+  float: left;
+  cursor: pointer;
+}
+
+.inner-top-cart h4{
+  margin: 0;
+  margin-left: 20px;
+}
+
+.cart-price{
+  margin: 0;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top:0;
 }
 
 .make__sale__items__container{

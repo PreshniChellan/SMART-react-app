@@ -135,8 +135,8 @@ export const MakeSale = (props) => {
     }
 
     //Drop Item in cart to show info on it.
-    const dropItem = () => {
-
+    const dropItem = (e) => {
+      e.target.parentNode.parentNode.style.height = "150px";
     }
 
     const exitFolder = async() => {
@@ -173,7 +173,7 @@ export const MakeSale = (props) => {
 
                 {!customer ? (<div className="make__sale__search_user">
                     <img className="make__sale__user_img" src={user}/>
-                    <SearchBar handleCustomer={handleCustomer} className="customer__search" placeholder="Search user" names = {data.names}/>
+                    <SearchBar handleCustomer={handleCustomer} className="customer__search" placeholder="Search for customer" names = {data.names}/>
                 </div>) : <div className="make__sale__search_user">
                     <img className="make__sale__user_img" src={UserIcon}/>
                     <h1 className="make__sale__customer">{customer}</h1>
@@ -182,14 +182,13 @@ export const MakeSale = (props) => {
 
                 <div className="make__sale__user__details">
                     <div className="make__sale__items__container">
-                        {!cartLoading && cart.map(item => (<div className="make__sale__cart">
-
-                        <h5>{item.name}</h5>
-                        <div className="make__sale__item-info">
-
+                        <div className="make__sale__cart">
+                        <div className="inner-top-cart">
+                        <span className="cart-collapse" onClick={dropItem}>></span> <h4> 3.0 Duo Gold</h4><span className="cart-price">R853</span>
                         </div>
 
-                        </div>))}
+
+                        </div>
                     </div>
                     <div className="make__sale__sale__details">
                         <div>

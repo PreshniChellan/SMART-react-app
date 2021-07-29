@@ -23,3 +23,10 @@
 .popup__inner{
   padding: 20px;
 }
+
+.popup_products{
+  height: auto;
+  overflow: auto;
+  max-height: 170px;
+  text-align: center;
+}

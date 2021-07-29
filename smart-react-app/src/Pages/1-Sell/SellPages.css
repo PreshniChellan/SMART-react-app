@@ -245,11 +245,12 @@ tr:nth-child(odd) {
 }
 
 .make__sale__cart{
-    background: red;
     width: 100%;
     height: 30px;
     transition: 0.4s ease-in;
     position: relative;
+    overflow: hidden;
+    max-height: 190px;
 }
 
 .inner-top-cart{
@@ -259,14 +260,93 @@ tr:nth-child(odd) {
   top: 0;
 }
 
+.inner-bottom-cart{
+  width: 90%;
+  margin: auto;
+  height: auto;
+  margin-top: 50px;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 10px 0;
+}
+
+.inner-bottom-inputs{
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 20% 30% 30%;
+  grid-gap: 30px;
+}
+
 .cart-collapse{
   float: left;
+  margin: 0 10px;
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .inner-top-cart h4{
   margin: 0;
   margin-left: 20px;
+}
+
+.inner-cart-qty{
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.inner-cart-qty span{
+  text-align: center;
+}
+
+.inner-cart-qty input{
+  width: 80px;
+  margin: auto;
+}
+
+.inner-cart-retail{
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.inner-cart-retail span{
+  text-align: center;
+}
+
+.inner-cart-retail input{
+  width: 110px;
+  margin: auto;
+}
+
+.inner-cart-discount{
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.inner-cart-discount span{
+  text-align: center;
+}
+
+.inner-cart-discount input{
+  width: 110px;
+  margin: auto;
+}
+
+.inner-cart-notes{
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  margin-top: 20px;
+}
+
+.inner-cart-notes span{
+  width: 100%;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.inner-cart-notes input{
+  width: 90%;
+  margin: auto;
 }
 
 .cart-price{
@@ -281,7 +361,6 @@ tr:nth-child(odd) {
   width: 100%;
   height: 75%;
   max-height: 875;
-  background: blue;
   overflow: auto;
 }
 

@@ -42,6 +42,8 @@ export const MakeSale = (props) => {
         ]
     }
 
+    const random_number = Math.floor(Math.random() * 5);
+
 //Method to check status code and return JSON data from REST API.
     const returnJSON = async (link) => {
         const res = await fetch(link);
@@ -136,7 +138,15 @@ export const MakeSale = (props) => {
 
     //Drop Item in cart to show info on it.
     const dropItem = (e) => {
-      e.target.parentNode.parentNode.style.height = "150px";
+
+      if(e.target.parentNode.parentNode.style.height == "190px"){
+        e.target.parentNode.parentNode.style.height = "30px";
+        e.target.style.transform = "rotate(0deg)";
+      }
+      else{
+        e.target.parentNode.parentNode.style.height = "190px";
+        e.target.style.transform = "rotate(90deg)";
+      }
     }
 
     const exitFolder = async() => {
@@ -154,7 +164,7 @@ export const MakeSale = (props) => {
         <div>
             <Sidebar />
             <div className="make__sale__body">
-            <Popup visibility={popupVisibility}/>
+            <Popup visibility={popupVisibility} test_number={random_number}/>
             <div className="make__sale__left__container">
                 <div className="make__sale__search__conatiner">
                 <img className="make__sale__cart__icon" src={shopping}/>
@@ -163,7 +173,7 @@ export const MakeSale = (props) => {
                 <input type="text" placeholder="Search for something" onKeyDown={onKeyDown} className="make__sale__searchbar"></input>
                 <div id="search"></div>
                 <div id="make__items__body" className="make__sale__items">
-                  <Products exitFolder={exitFolder} itemsChosen={chooseItem} setPopup={setPopup} items={items} searchedName={searchedName} getCategory={getCategory} loading={loading}/>
+                  <Products exitFolder={exitFolder} itemsChosen={chooseItem} setPopup={setPopup} items={items} searchedName={searchedName} action={getCategory} loading={loading}/>
                 </div>
             </div>
             <div className="make__sale__right__container">
@@ -187,8 +197,32 @@ export const MakeSale = (props) => {
                         <span className="cart-collapse" onClick={dropItem}>></span> <h4> 3.0 Duo Gold</h4><span className="cart-price">R853</span>
                         </div>
 
+                        <div className="inner-bottom-cart">
+                        <div className="inner-bottom-inputs">
+                          <div className="inner-cart-qty">
+                            <span>Qty</span>
+                            <input type="text"/>
+                          </div>
+                          <div className="inner-cart-retail">
+                            <span>Retail Price</span>
+                            <input disabled type="text"/>
+                          </div>
+                          <div className="inner-cart-discount">
+                          <span>Discount</span>
+                          <input type="text"/>
+                          </div>
+                        </div>
+
+
+                        <div className="inner-cart-notes">
+                        <span>Notes on this product</span>
+                        <input placeholder="Add individual product notes here" type="text"/>
+                        </div>
+                        </div>
 
                         </div>
+
+
                     </div>
                     <div className="make__sale__sale__details">
                         <div>

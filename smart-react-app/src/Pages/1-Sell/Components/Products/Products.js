@@ -10,7 +10,7 @@ const test = (props) => {
       const itemsChosen = (item) => {
         //Checks if the data is not empty
               if(item !== undefined && props.itemsChosen === false) {
-                  return (<div id={item.id} onClick={props.getCategory} key = {item.id} className="make__sale__item">
+                  return (<div id={item.id} onClick={props.action} key = {item.id} className="make__sale__item">
                               <span className="make__sale__quantity">{item.id}</span>
                               <h5 className="make__sale__product">{item.id}</h5>
                           </div>)

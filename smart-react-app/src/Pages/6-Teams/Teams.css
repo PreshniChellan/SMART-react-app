@@ -30,3 +30,14 @@ tr:nth-child(odd) {
 .rowHighlight:hover {
   background-color: lightblue;
 }
+
+/* CONTAINER AND WRAPPER 1 */
+.FlexContainer {
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #F2F2F2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 105px;
+}

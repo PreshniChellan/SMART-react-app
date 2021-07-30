@@ -194,7 +194,7 @@ export const SidebarData = [
             },
             {
                 title: 'Targets',
-                path: '/Targets',
+                path: '/TeamTargets',
                 icon: <ImTarget style={iconStyle} />,
             },
 		]

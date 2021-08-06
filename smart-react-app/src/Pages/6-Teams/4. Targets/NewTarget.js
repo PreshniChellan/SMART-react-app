@@ -52,11 +52,6 @@ const NewTarget = () => {
                     </select>
                 </div>
             </div>
-
-
-
-
-
         </div>
     )
 }

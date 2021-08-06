@@ -1,3 +1,14 @@
+/*  NB IMPORTANT NOTES FOR ROUTING: IMPORT THE PAGES INTO THEIR CORRECT SECTION!
+  "INNER PAGES" ARE THOSE THAT CANNOT BE NAVIGATED TO FROM THE SIDENAV
+
+  TEMPLATE FOR ROUTING:
+  <Route exact path="/PAGE NAME" component={PAGE NAME} />
+
+  ALL ROUTING NEEDS TO BE WITHIN THE <ROUTER> AND <SWITCH> TAGS AT THE BOTTOM OF THE PAGE TO BE VALID
+  
+*/
+
+
 /* App Imports */
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'

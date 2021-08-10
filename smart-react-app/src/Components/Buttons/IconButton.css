@@ -1,0 +1,33 @@
+.IconButton__body{
+    height: 60px;
+    background: green;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    cursor: pointer;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #2DAAD6;
+    outline: none;
+    border: none;
+    margin: auto;
+}
+
+.IconButton__body img{
+    width: 25%;
+}
+
+.IconButton__body div{
+    margin-left: 15%;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.IconButton__body:focus {
+    outline: 0 !important;
+}
+
+.IconButton__body:hover {
+    background-color: #7D91D7;
+}

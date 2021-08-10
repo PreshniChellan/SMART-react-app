@@ -17,6 +17,7 @@ import Popup from '../Components/popup/Popup';
 import Sidebar from '../../../Components/SideNav/Sidebar'
 import SmallLoader from '../Components/SmallLoader/SmallLoader';
 import Products from '../Components/Products/Products';
+import FinishSale from './FinishSale';
 
 export const MakeSale = (props) => {
 
@@ -117,15 +118,15 @@ export const MakeSale = (props) => {
         fetchItems();
     }
 
-//Test functions to add data to the screen.
-    const selectItem = e => {
-        setCartLoading(true);
-        const temp_array = [...cart];
-        temp_array.push({name: 'Heets Pack Red', price_ex: "299", price_in: "343.85"});
-        setCart(temp_array);
-        setCartLoading(false);
-        console.log(cart);
-    }
+// //Test functions to add data to the screen.
+//     const selectItem = e => {
+//         setCartLoading(true);
+//         const temp_array = [...cart];
+//         temp_array.push({name: 'Heets Pack Red', price_ex: "299", price_in: "343.85"});
+//         setCart(temp_array);
+//         setCartLoading(false);
+//         console.log(cart);
+//     }
 
     //this functions will be sent to searchedSuggestions as a prop to get feedback.
     const handleCustomer = (customer) => {
@@ -159,9 +160,13 @@ export const MakeSale = (props) => {
       setPopupVisibility("visible");
     }
 
+    const finishSale = () => {
+        window.location.href = "FinishSale";
+    }
+
 
     return (
-        <div>
+            <div>
             <Sidebar />
             <div className="make__sale__body">
             <Popup visibility={popupVisibility} test_number={random_number}/>
@@ -194,7 +199,7 @@ export const MakeSale = (props) => {
                     <div className="make__sale__items__container">
                         <div className="make__sale__cart">
                         <div className="inner-top-cart">
-                        <span className="cart-collapse" onClick={dropItem}>></span> <h4> 3.0 Duo Gold</h4><span className="cart-price">R853</span>
+                        <span className="cart-collapse" onClick={dropItem}></span> <h4> 3.0 Duo Gold</h4><span className="cart-price">R853</span>
                         </div>
 
                         <div className="inner-bottom-cart">
@@ -235,7 +240,7 @@ export const MakeSale = (props) => {
                         </div>
                     </div>
                     <div className="make__sale__final">
-                    <button>Pay</button>
+                    <button onMouseDown={finishSale}>Pay</button>
                     <input disabled placeholder="R"></input>
                 </div>
                 </div>

@@ -67,6 +67,7 @@ import MainSettings from './Pages/8-MainSettings/MainSettings'
 /* Inner Site Pages start Here Pages *****************************************************/
 
   /* Sell Inner Pages */
+  import FinishSale from './Pages/1-Sell/Make a Sale/FinishSale';
 
 
   /* Dashboards Inner Pages */
@@ -198,6 +199,9 @@ function App() {
       <Route exact path="/NewStore" component={NewStore} />
       <Route exact path="/EditStore" component={EditStore} />
       <Route exact path="/NewTarget" component={NewTarget} />
+
+      {/* Sell Inner Pages */}
+      <Route exact path="/FinishSale" component={FinishSale} />
 
       </Switch>
     </Router>

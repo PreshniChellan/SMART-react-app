@@ -170,7 +170,7 @@ tr:nth-child(odd) {
 }
 
 .icons{
-  width: 20px;
+  width: 60px;
 }
 
 .make__sale__sale__details{
@@ -364,10 +364,6 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
   overflow: auto;
 }
 
-.make__sale__item-info{
-
-}
-
 .make__sale__customer{
     margin-top: -5px;
 }
@@ -391,6 +387,144 @@ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 
 .change__customer:hover{
     background-color: #7D91D7;
 }
+
+/*  FinishSale.js Styling  */
+
+.finish__sale__body{
+  padding: 0 8%;
+  display: flex;
+  padding-top:5%;
+}
+
+.finish__sale__left{
+  width: 35%;
+  height: auto;
+  padding: 0 20px;
+  margin:auto;
+}
+
+.finish__sale__left .inner__finish{
+  width: 100%;
+  min-height: 300px;
+  height:auto;
+  margin:auto;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 5px;
+}
+
+.finish__sale__left .inner__second__finish{
+  width: 100%;
+  height: 100px;
+  margin:auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.finish__sale__left .inner__second__finish h3{
+  position: absolute;
+  right: 10px;
+  background:transparent;
+  border: 0;
+}
+
+.finish__sale__left .inner__back{
+  margin-top: 20px;
+}
+
+.finish__sale__right{
+  width: 40%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.inner__right{
+  display: flex;
+  gap: 50px;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.inner__right__second{
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 40px;
+  margin:auto;
+  margin-top: 20px;
+  align-items: center;
+  gap: 40%;
+}
+
+
+.inner__right__second span{
+  font-size: larger;
+  font-weight: bold;
+}
+
+.inner__right__second input{
+  height: 30px;
+  border: 1px solid black;
+}
+
+.inner__right__third{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.inner__right__third__1{
+  margin: 20px 0;
+}
+
+.inner__right__third__2{
+  margin: 20px 0;
+}
+.finish__sale__details_1{
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow:auto;
+}
+
+.finish__sale__details_1__inner{
+  display: flex;
+  margin: 10px 0;
+  gap: 10%;
+}
+
+.final__sale__cost{
+  position: absolute;
+  right: 1%;
+}
+
+.final__sale__notes{
+  width: auto;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  word-wrap: break-word;
+  margin: 0 10px;
+}
+
+.finish__sale__subtotal div{
+  display: flex;
+  width:100%;
+  position: relative;
+  align-items: center;
+}
+
+.finish__sale__subtotal div input{
+  position: absolute;
+  right: 0;
+  width: 20%;
+}
+
+
 
 
 /* CSS FOR SALES PAGE ENDS HERE ***************************************************/

@@ -1,0 +1,11 @@
+.gen2_btn{
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: #2DAAD6;
+    outline: none;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+}
